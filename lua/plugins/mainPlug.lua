@@ -9,14 +9,24 @@
 -- * override the configuration of LazyVim plugins
 return {
   -- add gruvbox
-  { "ellisonleao/gruvbox.nvim" },
-
+  --
+  --{ "ellisonleao/gruvbox.nvim" },
   -- Configure LazyVim to load gruvbox
+  --
+
+  --{
+  --"LazyVim/LazyVim",
+  --opts = {
+  --colorscheme = "gruvbox",
+  --},
+  --},
   {
-    "LazyVim/LazyVim",
-    opts = {
-      colorscheme = "gruvbox",
-    },
+    'olivercederborg/poimandres.nvim',
+    priority = 2000,
+    -- optionally set the colorscheme within lazy config
+    config = function()
+      vim.cmd([[colorscheme poimandres]])
+    end
   },
 
   -- change trouble config
@@ -27,7 +37,7 @@ return {
   },
 
   -- disable trouble
-  { "folke/trouble.nvim",      enabled = true },
+  { "folke/trouble.nvim",                             enabled = true },
 
   -- override nvim-cmp and add cmp-emoji
   {
