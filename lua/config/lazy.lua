@@ -41,4 +41,95 @@ require("lazy").setup({
       },
     },
   },
+  -- New
+  {
+    "neovim/nvim-lspconfig",
+    config = function()
+      require("lspconfig").gopls.setup({})
+    end,
+  },
+
+  -- Treesitter for better syntax highlighting
+  {
+    "nvim-treesitter/nvim-treesitter",
+    run = ":TSUpdate",
+    config = function()
+      require("nvim-treesitter.configs").setup({
+        ensure_installed = { "go", "gomod", "gosum", "gowork" },
+        highlight = { enable = true },
+      })
+    end,
+  },
+
+  -- Autocompletion plugin
+  {
+    "hrsh7th/nvim-cmp",
+    requires = {
+      "hrsh7th/cmp-nvim-lsp",
+      "hrsh7th/cmp-buffer",
+      "hrsh7th/cmp-path",
+      "hrsh7th/cmp-cmdline",
+      "L3MON4D3/LuaSnip", -- Snippet engine
+      "saadparwaiz1/cmp_luasnip", -- Snippet completions
+    },
+    config = function()
+      local cmp = require("cmp")
+      cmp.setup({
+        snippet = {
+          expand = function(args)
+            require("luasnip").lsp_expand(args.body)
+          end,
+        },
+        mapping = {
+          ["<C-b>"] = cmp.mapping.scroll_docs(-4),
+          ["<C-f>"] = cmp.mapping.scroll_docs(4),
+          ["<C-Space>"] = cmp.mapping.complete(),
+          ["<C-e>"] = cmp.mapping.close(),
+          ["<CR>"] = cmp.mapping.confirm({ select = true }),
+        },
+        sources = cmp.config.sources({
+          { name = "nvim_lsp" },
+          { name = "luasnip" },
+        }, {
+          { name = "buffer" },
+        }),
+      })
+
+      -- Use buffer source for `/` and `?`
+      cmp.setup.cmdline("/", {
+        sources = {
+          { name = "buffer" },
+        },
+      })
+
+      cmp.setup.cmdline("?", {
+        sources = {
+          { name = "buffer" },
+        },
+      })
+
+      -- Use cmdline & path source for ':'
+      cmp.setup.cmdline(":", {
+        sources = cmp.config.sources({
+          { name = "path" },
+        }, {
+          { name = "cmdline" },
+        }),
+      })
+    end,
+  },
+
+  -- Additional Go-specific plugins (optional)
+  {
+    "ray-x/go.nvim",
+    requires = {
+      "ray-x/guihua.lua",
+      run = function()
+        require("go").setup()
+      end,
+    },
+    config = function()
+      require("go").setup()
+    end,
+  },
 })
