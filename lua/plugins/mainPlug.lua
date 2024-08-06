@@ -13,13 +13,12 @@ return {
   --{ "ellisonleao/gruvbox.nvim" },
   -- Configure LazyVim to load gruvbox
   --
-
-  --{
-  --"LazyVim/LazyVim",
-  --opts = {
-  --colorscheme = "gruvbox",
-  --},
-  --},
+  {
+    "xiyaowong/transparent.nvim",
+    config = function ()
+      vim.cmd([[TransparentEnable]])
+    end
+  },
   {
     'olivercederborg/poimandres.nvim',
     priority = 2000,
