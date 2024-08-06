@@ -16,8 +16,14 @@ return {
   {
     "xiyaowong/transparent.nvim",
     config = function ()
-      vim.cmd([[TransparentEnable]])
+      vim.cmd([[TransparentEnable]]) 
     end
+  },
+  {
+   'numToStr/Comment.nvim',
+    opts = {
+        -- add any options here
+    }
   },
   {
     'olivercederborg/poimandres.nvim',

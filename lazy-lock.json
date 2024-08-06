@@ -1,4 +1,5 @@
 {
+  "Comment.nvim": { "branch": "master", "commit": "e30b7f2008e52442154b66f7c519bfd2f1e32acb" },
   "LazyVim": { "branch": "main", "commit": "e864713163bc01d8c7b3a82acb0cd12025f556f8" },
   "SchemaStore.nvim": { "branch": "main", "commit": "218a9887085b81b3eb0ee8f1e2d20c4a7fd7b1c9" },
   "alpha-nvim": { "branch": "main", "commit": "41283fb402713fc8b327e60907f74e46166f4cfd" },
@@ -9,6 +10,7 @@
   "cmp-nvim-lsp": { "branch": "main", "commit": "39e2eda76828d88b773cc27a3f61d2ad782c922d" },
   "cmp-path": { "branch": "main", "commit": "91ff86cd9c29299a64f968ebb45846c485725f23" },
   "conform.nvim": { "branch": "master", "commit": "25d48271e3d4404ba017cb92a37d3a681c1ad149" },
+  "cord.nvim": { "branch": "master", "commit": "aca3ab983b464b61d1b2403f70531efd69d110d6" },
   "dashboard-nvim": { "branch": "master", "commit": "fabf5feec96185817c732d47d363f34034212685" },
   "dressing.nvim": { "branch": "master", "commit": "6741f1062d3dc6e4755367a7e9b347b553623f04" },
   "flash.nvim": { "branch": "main", "commit": "34c7be146a91fec3555c33fe89c7d643f6ef5cf1" },
