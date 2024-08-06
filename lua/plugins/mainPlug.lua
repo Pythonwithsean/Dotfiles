@@ -19,7 +19,6 @@ return {
   --opts = {
   --colorscheme = "gruvbox",
   --},
-<<<<<<< HEAD
   --},
   {
     'olivercederborg/poimandres.nvim',
@@ -29,13 +28,11 @@ return {
       vim.cmd([[colorscheme poimandres]])
     end
   },
-=======
   --}, 
   { "ellisonleao/gruvbox.nvim", priority = 1000 , config = function ()
     vim.cmd([[colorscheme gruvbox]])
     
   end, opts = ...},
->>>>>>> f713f05 (init)
 
   -- change trouble config
   {
