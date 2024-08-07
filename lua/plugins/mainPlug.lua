@@ -16,7 +16,17 @@ return {
   {
     "xiyaowong/transparent.nvim",
     config = function ()
-      vim.cmd([[TransparentEnable]]) 
+      -- vim.cmd([[TransparentEnable]])
+    end
+  },
+  {
+    "rose-pine/neovim", name = "rose-pine",
+    config = function ()
+    end
+  },
+  {
+  "EdenEast/nightfox.nvim",
+    config= function ()
     end
   },
   {
@@ -28,10 +38,11 @@ return {
     'olivercederborg/poimandres.nvim',
     priority = 2000,
     config = function()
-      vim.cmd([[colorscheme poimandres]])
     end
   },
-  { "ellisonleao/gruvbox.nvim", priority = 1000 , config = function () end
+  { "ellisonleao/gruvbox.nvim", priority = 1000 , config = function ()
+    vim.cmd([[colorscheme gruvbox]])
+  end
   },
 
   -- change trouble config
