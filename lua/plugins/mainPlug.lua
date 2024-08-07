@@ -22,22 +22,17 @@ return {
   {
    'numToStr/Comment.nvim',
     opts = {
-        -- add any options here
     }
   },
   {
     'olivercederborg/poimandres.nvim',
     priority = 2000,
-    -- optionally set the colorscheme within lazy config
     config = function()
       vim.cmd([[colorscheme poimandres]])
     end
   },
-  --}, 
-  { "ellisonleao/gruvbox.nvim", priority = 1000 , config = function ()
-    vim.cmd([[colorscheme gruvbox]])
-    
-  end, opts = ...},
+  { "ellisonleao/gruvbox.nvim", priority = 1000 , config = function () end
+  },
 
   -- change trouble config
   {
