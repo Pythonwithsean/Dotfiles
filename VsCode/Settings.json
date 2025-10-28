@@ -1,8 +1,9 @@
 {
     "vim.handleKeys": {
     "<C-b>": false,
-    "<C-j>": false
+    "<C-j>": false,
   },
+
   "editor.copyWithSyntaxHighlighting": false,
   "diffEditor.ignoreTrimWhitespace": false,
   "editor.emptySelectionClipboard": false,
@@ -15,15 +16,11 @@
   "editor.detectIndentation": false,
   "window.nativeFullScreen": true,
   "files.insertFinalNewline": true,
-  "files.trimFinalNewlines": true,
-"workbench.editor.showTabs": "none",
+"files.trimFinalNewlines": true,
   "editor.lineNumbers": "off",
-  "editor.guides.indentation": false,
-
-  // Silence the Noise
-  "breadcrumbs.enabled": false,
+"editor.guides.indentation": false,
   "scm.diffDecorations": "none",
-  "editor.hover.delay": 1500,
+  "editor.hover.delay": 200,
   "editor.hover.enabled": true,
   "editor.matchBrackets": "never",
   "workbench.tips.enabled": false,
@@ -46,7 +43,7 @@
   "editor.gotoLocation.multipleTypeDefinitions": "goto",
 
   // Typography
-  "editor.fontFamily": "Fira Code",
+  "editor.fontFamily": "Geist Mono",
   "editor.suggestFontSize": 18,
   "editor.suggestLineHeight": 30,
   "terminal.integrated.lineHeight": 1.4,
@@ -159,8 +156,8 @@
     "plaintext": "html"
   },
   "tailwindCSS.experimental.configFile": null,
-  "editor.fontWeight": "400",
-  "workbench.activityBar.location": "bottom",
+  "editor.fontWeight": "600",
+  "workbench.activityBar.location": "top",
   "workbench.statusBar.visible": false,
   "editor.inlineSuggest.suppressSuggestions": true,
   "codesnap.backgroundColor": "#FFC540",
@@ -169,7 +166,7 @@
   "editor.padding.top": 16,
   "editor.cursorBlinking": "solid",
   "editor.stickyScroll.enabled": false,
-  "editor.lineHeight": 1.3,
+  "editor.lineHeight": 1.4,
 
   "editor.tokenColorCustomizations": {
     "textMateRules": [
@@ -196,12 +193,14 @@
   "vscode_custom_css.imports": [
     "file:///home/pythonwithsean/Documents/developer/Dotfiles/VsCode/custom_vscode.js",
     "file:///home/pythonwithsean/Documents/developer/Dotfiles/VsCode/custom_vscode.css"
-  ],
-  "workbench.colorTheme": "React Theme",
-  "workbench.iconTheme": "eq-material-theme-icons-light",
+],
   "workbench.sideBar.location": "right",
   "material-icon-theme.files.color": "#42a5f5",
 "workbench.tree.enableStickyScroll": false,
 "makefile.configureOnOpen": true,
-"git.openRepositoryInParentFolders": "always"
+"git.openRepositoryInParentFolders": "always",
+"redhat.telemetry.enabled": true,
+"workbench.colorTheme": "Sonokai Espresso",
+"workbench.iconTheme": "gruvbox-material-icon-theme",
+"breadcrumbs.enabled": false
 }
